@@ -5,19 +5,25 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
+    "test": "vite  --mode test --open",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src",
     "fix": "eslint src --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "lint:eslint": "eslint src/**/*.{ts,vue} --cache --fix",
-    "lint:style": "stylelint src/**/*.{css,scss,vue} --cache --fix"
+    "lint:style": "stylelint src/**/*.{css,scss,vue} --cache --fix",
+    "build:test": "vue-tsc && vite build --mode test",
+    "build:pro": "vue-tsc && vite build --mode production"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "element-plus": "^2.3.8",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.9",
+    "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "@vitejs/plugin-vue": "^4.2.3",
